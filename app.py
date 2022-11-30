@@ -1,8 +1,6 @@
 from datetime import datetime, date
 from flask import *
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
-
 signedInUser = ''
 
 
@@ -32,7 +30,7 @@ def readFile():
     return f.readline()
 
 app = Flask(__name__)
-mail=Mail(app)
+# mail=Mail(app)
 
 app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///kanban.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
