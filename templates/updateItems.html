@@ -3,7 +3,7 @@
 <div class="container">
   <form method="post" action="/updateItems/{{listItems.sno}}">
     <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
+      <label for="title" class="form-label white-text">Title</label>
       <input
         placeholder="{{listItems.title}}"
         type="text"
@@ -14,7 +14,7 @@
       />
     </div>
     <div class="mb-3">
-      <label for="content" class="form-label">Content</label>
+      <label for="content" class="form-label white-text">Content</label>
       <input
         placeholder="{{listItems.content}}"
         type="text"
@@ -24,7 +24,7 @@
       />
     </div>
     <div class="mb-3 inp">
-      <label for="deadline" class="form-label">Deadline</label>
+      <label for="deadline" class="form-label white-text">Deadline</label>
       <input
         required
         type="datetime-local"
@@ -35,7 +35,7 @@
     </div>
     <input type="checkbox" name="status" value="on" />
     <input type="hidden" name="status" value="off" />
-    <label for="status" class="mb-3">Mark it as complete</label>
+    <label for="status" class="mb-3 white-text">Mark it as complete</label>
     <div class="dropdown">
       <a
         class="btn btn-dark dropdown-toggle mb-2"
@@ -80,11 +80,13 @@
         {% endif %} {% endfor %}
       </ul>
     </div>
-    <button type="submit" class="btn btn-outline-dark me-2 mt-2">Update</button>
+    <button type="submit" class="btn btn-outline-light me-2 mt-2">
+      Update
+    </button>
     <a
       type="submit"
       href="/deleteItem/{{listItems.sno}}"
-      class="btn btn-outline-dark mt-2"
+      class="btn btn-outline-light mt-2"
       >Delete</a
     >
   </form>
