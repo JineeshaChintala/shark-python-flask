@@ -1,8 +1,10 @@
 from datetime import datetime, date
 from flask import *
 from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail, Message
 
 signedInUser = ''
+
 
 
 file = open('count.txt','w')
@@ -33,6 +35,8 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///kanban.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 
 db = SQLAlchemy(app)
 
@@ -233,4 +237,4 @@ def about():
     return render_template('about.html')
 
 if __name__=="__main__":
-    app.run(host="localhost", debug=False)
+    app.run(host="localhost", debug=True)

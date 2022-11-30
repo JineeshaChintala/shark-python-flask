@@ -9,6 +9,7 @@
         name="name"
         aria-describedby="emailHelp"
         required
+        style="height: 50px;"
       />
     </div>
     <div class="side px-2"> 
@@ -20,12 +21,12 @@
     {% if each.username == username %}
     <div class="col-md-4 mb-5">
       <div
-        class="card shadow p-3 mb-5 bg-white rounded"
-        style="width: 18rem; border: 3px solid #9ED2C6"
+        class="card shadow-lg p-3 mb-5 bg-white rounded"
+        style="width: 18rem; border: 3px solid #4f5050"
       >
         <div class="text-center">
           <img
-            src="../static/task-image.jpg"
+            src="../static/projectImg.png"
             class="card-img-top task-image"
             alt="..."
           />
@@ -64,7 +65,7 @@
     {% endfor %}
   </div>
   <div>
-    <h4 class="mt-4 headline2">Completed Tasks</h4>
+    <h4 class="mt-4 headline2 white-text">Completed Tasks</h4>
     {% if not listItems  %}
     <h5 class="mt-5">Completed tasks will be shown here.</h5>
     {% else %}

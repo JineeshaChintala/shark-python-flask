@@ -3,7 +3,7 @@
 <div class="container">
   <form method="post" action="/updateList/{{temp.sno}}">
     <div class="mb-3">
-      <label for="title" class="form-label">Name of the list</label>
+      <label for="title" class="form-label white-text">Name of the list</label>
       <input
         required
         placeholder="{{temp.listName}}"
@@ -14,12 +14,18 @@
         aria-describedby="emailHelp"
       />
     </div>
-    <button type="submit" class="btn btn-outline-dark">Update</button>
-    <a href="/add/{{temp.sno}}" type="button" class="btn btn-outline-dark ms-3">
+    <button type="submit" class="btn btn-outline-light white-text">
+      Update
+    </button>
+    <a
+      href="/add/{{temp.sno}}"
+      type="button"
+      class="btn btn-outline-light ms-3"
+    >
       Add item </a
     ><a
       type="button"
-      class="btn ms-3 delete-all btn-outline-dark"
+      class="btn ms-3 delete-all btn-outline-light"
       onclick="showAlert('/delete/{{temp.sno}}');"
     >
       Remove list
