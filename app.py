@@ -32,6 +32,7 @@ def readFile():
     return f.readline()
 
 app = Flask(__name__)
+mail=Mail(app)
 
 app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///kanban.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
